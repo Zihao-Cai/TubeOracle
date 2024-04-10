@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>options</class>
+ <widget class="QMainWindow" name="options">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>826</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 11pt &quot;Times New Roman&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frameOptions">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>95</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Times New Roman&quot;;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="geobtn">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>5</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);
+border-top-color: rgb(173, 173, 173);
+border-right-color: rgb(173, 173, 173);
+border-bottom-color: rgb(173, 173, 173);
+border-left-color: rgb(173, 173, 173);
+
+border:1px solid #717171;
+
+</string>
+     </property>
+     <property name="text">
+      <string>几何</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="meshbtn">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>35</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Times New Roman&quot;;
+
+border:1px solid #717171;
+</string>
+     </property>
+     <property name="text">
+      <string>网格</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="solbtn">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>65</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+border:1px solid #717171;
+</string>
+     </property>
+     <property name="text">
+      <string>求解器</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frameBank">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>260</y>
+      <width>101</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="geometrytab">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>231</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gaspectWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>220</y>
+      <width>331</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(229, 229, 229);</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>101</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>点(实体)大小</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>70</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>点(选中)大小</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>150</y>
+       <width>123</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>线(选中)宽</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sufaceseffect">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>230</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 13pt &quot;Times New Roman&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>230</y>
+       <width>97</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>平面效果</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>110</y>
+       <width>78</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>线(实体)宽</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="pointSize">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>4.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="selectPointSize">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>5.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="curveWidth">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>2.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="selectCurve">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>150</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>2.500000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>190</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>坐标缩放</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="geoscale">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>999.990000000000009</double>
+     </property>
+     <property name="singleStep">
+      <double>2.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>50.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="meshtab">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>0</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="mvisibilityWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>50</y>
+      <width>361</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(229, 229, 229);</string>
+    </property>
+    <widget class="QCheckBox" name="twoDEL">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>15</y>
+       <width>147</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>2D单元标签</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="twoDEF">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>55</y>
+       <width>143</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>2D单元面</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="nodeLables">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>15</y>
+       <width>104</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>节点标签</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="maspectWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>210</y>
+      <width>361</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(229, 229, 229);</string>
+    </property>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>节点大小</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>65</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>网格线宽</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="pointSize_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>3.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="lineWidth">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>65</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gvisibilityWidge" native="true">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>200</y>
+      <width>121</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(229, 229, 229);</string>
+    </property>
+    <widget class="QCheckBox" name="curvelabels">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>55</y>
+       <width>104</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>线标签</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="surfacelabels">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>95</y>
+       <width>117</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 13pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>surface labels</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="pointLabels">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>15</y>
+       <width>102</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>点标签</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="generalwidge" native="true">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>380</y>
+      <width>411</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(229, 229, 229);</string>
+    </property>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>MeshAdapt</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Automatic</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Delaunay</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Frontal-Delaunay</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BAMG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Frontal-Delaunay for Quads</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Packing of Parallelograms</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Quasi-structured Quad</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>90</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>2D网格算法</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Default tetrahedral</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Netgen</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HighOrder</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HighOrderElastic</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HighOrder-FastCurving</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Laplace2D</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>QuadQuasiStructured</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>70</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>网格优化算法</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <zorder>frameBank</zorder>
+   <zorder>frameOptions</zorder>
+   <zorder>geometrytab</zorder>
+   <zorder>gaspectWidget</zorder>
+   <zorder>meshtab</zorder>
+   <zorder>mvisibilityWidget</zorder>
+   <zorder>maspectWidget</zorder>
+   <zorder>gvisibilityWidge</zorder>
+   <zorder>generalwidge</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>geobtn</sender>
+   <signal>clicked()</signal>
+   <receiver>geometrytab</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>meshbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>meshtab</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>348</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>geobtn</sender>
+   <signal>clicked()</signal>
+   <receiver>meshtab</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>23</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>meshbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>geometrytab</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>solbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>geometrytab</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>solbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>meshtab</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

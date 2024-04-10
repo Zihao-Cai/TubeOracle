@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+***************************************************************************************************
+ Copyright (C) 2023 The Qt Company Ltd.
+ SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+***************************************************************************************************
+-->
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29DEFA20-5C4C-4DB2-8257-4AD2A9E4F703}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+    <QtPlugin>true</QtPlugin>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.2_msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets;printsupport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+    <QtPlugin>true</QtPlugin>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\蔡子豪\Desktop\TubeOracle\gmsh\include;C:\Users\蔡子豪\Desktop\TubeOracle\qcustomplot\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\蔡子豪\Desktop\TubeOracle\gmsh\lib;C:\Users\蔡子豪\Desktop\TubeOracle\qcustomplot\library;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gmsh.lib;qcustomplotd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\蔡子豪\Desktop\TubeOracle\gmsh\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <RuntimeLibrary>$(Qt_RUNTIME_)</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\蔡子豪\Desktop\TubeOracle\gmsh\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gmsh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="FE_Functions.cpp" />
+    <ClCompile Include="PostView.cpp" />
+    <ClCompile Include="QualityView.cpp" />
+    <ClCompile Include="SetDis.cpp" />
+    <ClCompile Include="SetF.cpp" />
+    <ClCompile Include="SetQ.cpp" />
+    <ClCompile Include="TubeOracle.cpp" />
+    <QtRcc Include="TubeOracle.qrc" />
+    <QtUic Include="about.ui" />
+    <QtUic Include="addCircle.ui" />
+    <QtUic Include="addPoint.ui" />
+    <QtUic Include="addRectangle.ui" />
+    <QtUic Include="distribution.ui" />
+    <QtUic Include="elementsColor.ui" />
+    <QtUic Include="key.ui" />
+    <QtUic Include="newproPanel.ui" />
+    <QtUic Include="options.ui" />
+    <QtUic Include="PostView.ui" />
+    <QtUic Include="QualityView.ui" />
+    <QtUic Include="SetDis.ui" />
+    <QtUic Include="SetF.ui" />
+    <QtUic Include="SetQ.ui" />
+    <QtUic Include="SolverWidget.ui" />
+    <QtUic Include="TubeOracle.ui" />
+    <QtMoc Include="TubeOracle.h" />
+    <ClCompile Include="about.cpp" />
+    <ClCompile Include="addCircle.cpp" />
+    <ClCompile Include="addPoint.cpp" />
+    <ClCompile Include="addRectangle.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="CurveLoop.cpp" />
+    <ClCompile Include="distribution.cpp" />
+    <ClCompile Include="Edge.cpp" />
+    <ClCompile Include="elementsColor.cpp" />
+    <ClCompile Include="GModel.cpp" />
+    <ClCompile Include="ItemCurve.cpp" />
+    <ClCompile Include="ItemLine.cpp" />
+    <ClCompile Include="ItemPoint.cpp" />
+    <ClCompile Include="key.cpp" />
+    <ClCompile Include="MygraphicsView.cpp" />
+    <ClCompile Include="newproPanel.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="options.cpp" />
+    <ClCompile Include="Planesurface.cpp" />
+    <ClCompile Include="SolverWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="options.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="elementsColor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="addCircle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="addPoint.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="distribution.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="addRectangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="newproPanel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FE_Functions.h" />
+    <QtMoc Include="SetF.h" />
+    <QtMoc Include="SetQ.h" />
+    <QtMoc Include="SetDis.h" />
+    <QtMoc Include="PostView.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="Triangle.h" />
+    <QtMoc Include="QualityView.h" />
+    <QtMoc Include="MyScene.h" />
+    <ClInclude Include="PairHashEqual.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="key.h" />
+    <QtMoc Include="SolverWidget.h" />
+    <QtMoc Include="Node.h" />
+    <QtMoc Include="Planesurface.h" />
+    <QtMoc Include="CurveLoop.h" />
+    <QtMoc Include="Edge.h" />
+    <QtMoc Include="about.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="GModel.h" />
+    <QtMoc Include="ItemCurve.h" />
+    <QtMoc Include="ItemLine.h" />
+    <QtMoc Include="ItemPoint.h" />
+    <QtMoc Include="MygraphicsView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TubeOracle.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon\icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

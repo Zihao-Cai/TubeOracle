@@ -1,0 +1,10 @@
+geoscale=50
+edgewidth=1
+lcc=1.0
+curvewidth=2
+selectcurvewidth=2.5
+selectnodesize=3.5
+pointsize=4
+selectpointsize=5
+nodesize=3
+dashlinewidth=0.8

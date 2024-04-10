@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/TubeOracle">
+        <file>icon/icon1.ico</file>
+    </qresource>
+</RCC>
